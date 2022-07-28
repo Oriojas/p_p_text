@@ -51,9 +51,32 @@ class cleanText():
 
         # este metodo bora :) Rossemberg
 
-    def c_url(self):
+    def c_url(self,not_clear: bool = True) -> str:
+        """
+        Esta función elimina url de un cadena de texto
 
-        # este metodo borra las url Jhonny
+        Parameters
+        ----------
+        not_clear : bool, optional
+            DESCRIPTION. The default is True.
+
+        Returns
+        -------
+        str
+            DESCRIPTION. texto sin URL
+
+        """
+
+        # Terminé mi tarea Jhonny Osorio
+        
+        if not_clear:
+            c_url_pattern = re.compile(r"\bhttps:.+\b")
+            out_put_txt = re.sub(c_url_pattern, " ", self.input_text)
+        else: 
+            out_put_txt = self.input_text
+
+        return out_put_txt
+            
 
     def c_hasgtags(self):
 
