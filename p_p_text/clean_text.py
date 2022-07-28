@@ -45,19 +45,19 @@ class cleanText():
 
     def c_mentios(self):
 
-        # este metodo borra las @
+        # este metodo borra las @ Valentina
 
     def c_emojis(self):
 
-        # este metodo bora :)
+        # este metodo bora :) Rossemberg
 
     def c_url(self):
 
-        # este metodo borra las url
+        # este metodo borra las url Jhonny
 
     def c_hasgtags(self):
 
-        # borra #
+        # borra # Miguel
 
 
 
