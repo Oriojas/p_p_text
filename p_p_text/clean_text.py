@@ -6,6 +6,9 @@ Created on Wed Jul 27 20:08:55 2022
 @author: oscar
 """
 
+import re
+
+
 class cleanText():
     # to_do esta clase limpia el texto
 
