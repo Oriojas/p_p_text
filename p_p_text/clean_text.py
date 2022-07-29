@@ -51,7 +51,7 @@ class cleanText():
         '''
         Esta función elimina los emojis de una cadena de texto
 
-        Parametersgit
+        Parameters
         ----------
         not_clear : bool:opcional si no quiero eliminar los emojis
             DESCRIPTION.
