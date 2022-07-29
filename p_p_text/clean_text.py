@@ -43,6 +43,7 @@ class cleanText():
 
         return out_put_txt
 
+
     def c_mentios(self):
 
         # este metodo borra las @ Valentina
@@ -71,14 +72,32 @@ class cleanText():
 
         return out_put_txt
         # este metodo bora :) Rossemberg
+        
+    def c_hasgtags(self, not_clear: bool = True) -> str:
+        '''
+        Este metodo elimina los hastags del texto.
 
-    def c_url(self):
 
-        # este metodo borra las url Jhonny
+        Parameters
+        ----------
+        not_clear : bool, optional
+            DESCRIPTION. The default is True.
 
-    def c_hasgtags(self):
+        Returns
+        -------
+        str
+            DESCRIPTION. El texto sin los hastags.
+
+        '''
 
         # borra # Miguel
+        
+        if not_clear:
+            c_hast_pattern = re.compile(r"\#[a-zA-Z0-9\-\_]+\b")
+            out_put_txt = re.sub(c_hast_pattern, " ", self.input_text)
+            
+        else: out_put_txt = self.input_text
 
+        return out_put_txt
 
 
