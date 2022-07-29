@@ -78,6 +78,33 @@ class cleanText():
         Este metodo elimina los hastags del texto.
 
 
+
+    def c_url(self,not_clear: bool = True) -> str:
+        """
+        Esta función elimina url de un cadena de texto
+
+        Parameters
+        ----------
+        not_clear : bool, optional
+            DESCRIPTION. The default is True.
+
+        Returns
+        -------
+        str
+            DESCRIPTION. texto sin URL
+
+        """
+
+        # Terminé mi tarea Jhonny Osorio
+        
+        if not_clear:
+            c_url_pattern = re.compile(r"\bhttps:.+\b")
+            out_put_txt = re.sub(c_url_pattern, " ", self.input_text)
+        else: 
+            out_put_txt = self.input_text
+
+        return out_put_txt
+            
         Parameters
         ----------
         not_clear : bool, optional
@@ -87,6 +114,7 @@ class cleanText():
         -------
         str
             DESCRIPTION. El texto sin los hastags.
+
 
         '''
 
