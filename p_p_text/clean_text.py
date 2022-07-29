@@ -9,8 +9,10 @@ Created on Wed Jul 27 20:08:55 2022
 import re
 
 
-class cleanText():
-    # to_do esta clase limpia el texto
+class CleanText():
+    '''
+    Esta clase hace la limpieza de texto
+    '''
 
 
 
@@ -47,8 +49,9 @@ class cleanText():
     def c_mentios(self):
 
         # este metodo borra las @ Valentina
+        return None
 
-    def c_emojis(self,not_clear: bool = True) -> str:
+    def c_emojis(self, not_clear: bool = True) -> str:
         '''
         Esta función elimina los emojis de una cadena de texto
 
@@ -66,46 +69,19 @@ class cleanText():
 
         if not_clear:
             c_emojis_pattern = re.compile(r"[^a-zA-Z\u00C0-\u00FF ]")
-            out_put_txt = re.sub(c_emojis_pattern, ' ', input_tex)
+            out_put_txt = re.sub(c_emojis_pattern, ' ', self.input_text)
 
-        else: out_put_txt = self.input_text
+        else:
+            out_put_txt = self.input_text
 
         return out_put_txt
-        # este metodo bora :) Rossemberg
-        
+
+
     def c_hasgtags(self, not_clear: bool = True) -> str:
         '''
         Este metodo elimina los hastags del texto.
 
-
-
-    def c_url(self,not_clear: bool = True) -> str:
-        """
-        Esta función elimina url de un cadena de texto
-
-        Parameters
-        ----------
-        not_clear : bool, optional
-            DESCRIPTION. The default is True.
-
-        Returns
-        -------
-        str
-            DESCRIPTION. texto sin URL
-
-        """
-
-        # Terminé mi tarea Jhonny Osorio
-        
-        if not_clear:
-            c_url_pattern = re.compile(r"\bhttps:.+\b")
-            out_put_txt = re.sub(c_url_pattern, " ", self.input_text)
-        else: 
-            out_put_txt = self.input_text
-
-        return out_put_txt
-            
-        Parameters
+       Parameters
         ----------
         not_clear : bool, optional
             DESCRIPTION. The default is True.
@@ -118,14 +94,11 @@ class cleanText():
 
         '''
 
-        # borra # Miguel
-        
+
         if not_clear:
             c_hast_pattern = re.compile(r"\#[a-zA-Z0-9\-\_]+\b")
             out_put_txt = re.sub(c_hast_pattern, " ", self.input_text)
-            
+
         else: out_put_txt = self.input_text
 
         return out_put_txt
-
-

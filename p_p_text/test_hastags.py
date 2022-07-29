@@ -5,7 +5,7 @@ Created on Thu Jul 28 18:23:13 2022
 @author: User
 """
 
-from clean_text import cleanText as CL
+from clean_text import CleanText as CL
 
 file = "hola soy #miguel_pinto y vengo a saludar"
 file2 = "hola soy miguel"
