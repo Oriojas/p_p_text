@@ -47,8 +47,29 @@ class cleanText():
 
         # este metodo borra las @ Valentina
 
-    def c_emojis(self):
+    def c_emojis(self,not_clear: bool = True) -> str:
+        '''
+        Esta función elimina los emojis de una cadena de texto
 
+        Parametersgit
+        ----------
+        not_clear : bool:opcional si no quiero eliminar los emojis
+            DESCRIPTION.
+
+        Returns
+        -------
+        str
+            DESCRIPTION. texto sin emojis
+
+        '''
+
+        if not_clear:
+            c_emojis_pattern = re.compile(r"[^a-zA-Z\u00C0-\u00FF ]")
+            out_put_txt = re.sub(c_emojis_pattern, ' ', input_tex)
+
+        else: out_put_txt = self.input_text
+
+        return out_put_txt
         # este metodo bora :) Rossemberg
 
     def c_url(self):
