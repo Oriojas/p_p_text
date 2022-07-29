@@ -1,7 +1,10 @@
 # p_p_text
-Limpieza de texto Búsqueda de palabras Listado de stopwords
+Limpieza de texto BÃºsqueda de palabras Listado de stopwords
 
-## Para utilizar esta libreria necesitamos la versi�n python 3.8
-
+## Para utilizar esta libreria necesitamos la versión python 3.8
 
 Este es un cambio de Oscar Riojas
+
+hola estoy haciendo un cambio
+
+Este es un cambio desde mi branch
