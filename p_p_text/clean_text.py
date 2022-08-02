@@ -43,9 +43,32 @@ class cleanText():
 
         return out_put_txt
 
-    def c_mentios(self):
+    
 
-        # este metodo borra las @ Valentina
+    def c_mentios(self, not_clear: bool = True) -> str:
+   
+         '''
+         Esta función elimina las menciones en los textos 
+
+         Parameters
+         ----------
+         not_clear : bool, optional si no quiero eliminar las menciones
+             DESCRIPTION. The default is True.
+
+         Returns
+         -------
+         str
+             DESCRIPTION. texto sin menciones 
+
+         '''
+
+    if not_clear:
+            rt_patter = re.compile(r"\@[a-zA-Z0-9\-\_]+\b"')
+            out_put_text = re.sub(rt_patter," ", self.input_text) 
+        else: out_put_text = self.input_text 
+        
+        return out_put_text 
+                       
 
     def c_emojis(self):
 
